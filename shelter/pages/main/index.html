@@ -14,12 +14,12 @@
         <header>
             <div class="wrapper">
                 <a class="logo" href="#">
-                    <h1>Cozy House</h1>
-                    <p>Shelter for pets in Boston</p>
+                    <h1 class="logo-heading">Cozy House</h1>
+                    <p class="logo-subtitle">Shelter for pets in Boston</p>
                 </a>
                 <ul class="header-ul">
-                    <li class="header-li"><a class="header-li-link">About the shelter</a></li>
-                    <li class="header-li"><a class="header-li-link" href="../pets/index.html">Our pets</a></li>
+                    <li class="header-li"><a class="header-li-link active">About the shelter</a></li>
+                    <li class="header-li"><a class="header-li-link" target="_blank" href="../pets/index.html">Our pets</a></li>
                     <li class="header-li"><a class="header-li-link" href="#help">Help the shelter</a></li>
                     <li class="header-li"><a class="header-li-link" href="#footer">Contacts</a></li>
                 </ul>
@@ -27,13 +27,13 @@
         </header>
         <section class="start-screen">
             <div class="wrapper">
-                <div class="start-screen-content">
-                    <h2 class="ss-title">Not only people need a house</h2>
-                    <p class="ss-text-content">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+                <div class="start-screen-text-content">
+                    <h2 class="start-screen-heading">Not only people need a house</h2>
+                    <p class="start-screen-subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                     <a class="start-screen-btn" href="#our-friends">Make a friend</a>
                 </div>
                 <picture>
-                    <img src="../../assets/images/ss-puppy-desktop.png" alt="puppy picture">
+                    <img class="start-screen-puppy-picture" src="../../assets/images/ss-puppy-desktop.png" alt="puppy picture">
                 </picture>
             </div>
         </section>
@@ -44,20 +44,20 @@
                 <picture>
                     <img src="../../assets/images/about-pets.png" alt="pets - cat and dog picture">
                 </picture>
-                <div class="about-content">
+                <div class="about-text-block">
                     <h3 class="about-content-heading">
                         About the shelter “Cozy House”
                     </h3>
-                    <p class="about-text-content">
+                    <p class="about-text">
                         Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.
                     </p>
-                    <p class="about-text-content">
+                    <p class="about-text">
                         We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.
                     </p>
                 </div>
             </div>
         </section>
-        <section class="pets-section">
+        <section class="pets-section" id="our-friends">
             <div class="wrapper">
                 <h3 class="pets-content-heading">
                     Our friends who are looking for a house
@@ -84,7 +84,7 @@
                 <a class="pets-content-bottom-btn" href="../pets/index.html">Get to know the rest</a>
             </div>
         </section>
-        <section class="help-section">
+        <section class="help-section" id="help">
             <div class="wrapper">
                 <h3 class="help-heading">How you can help
                     our shelter</h3>
@@ -171,7 +171,7 @@
         </section>
     </main>
     <footer>
-        <div class="wrapper">
+        <div class="wrapper" id="footer">
             <div class="footer-for-qestions">
                 <h3>For questions and suggestions</h3>
                 <div>
