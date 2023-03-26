@@ -242,7 +242,16 @@ main {
     background-image: url(../../../assets/icons/our_pets/pag_right.svg);
 }
 
+.ofpp-btn.active:hover {
+    background-color: #FDDCC4;
+    transition: 0.5s;
+    border-color: #FDDCC4;
+    cursor: pointer;
+}
 
+.ofpp-btn.active:active {
+    transform: scale(90%);
+}
 
 .page-num {
     font-family: 'Georgia';
