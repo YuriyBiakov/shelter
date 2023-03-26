@@ -46,14 +46,22 @@ header .wrapper {
     align-items: center;
 }
 
+.logo:hover {
+    text-shadow: 0 0 15px snow;
+    transition: 0.5s;
+}
+
+.logo:active{
+    transform: scale(90%);
+}
+
 .logo-heading {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 110%; /* or 35px */
+    line-height: 110%;
     letter-spacing: 0.06em; 
-    /* color-primary */
     color: #F1CDB3;
     margin-bottom: 10px;
 }
@@ -74,8 +82,6 @@ header .wrapper {
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
-    /* identical to box height, or 24px */
-    /* color-dark-s */
     color: #CDCDCD;
 }
 
@@ -87,6 +93,10 @@ header .wrapper {
 .header-li-link:hover {
     color: #FAFAFA;
     transition: border 0.5s, color 0.5s;
+}
+
+.header-li-link.inactive:active{
+    transform: scale(90%);
 }
 
 
@@ -141,12 +151,19 @@ header .wrapper {
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
-    /* identical to box height, or 22px */
     letter-spacing: 0.06em;
-    /* color-dark-3xl */
     color: #292929;
     padding: 15px 0;
     text-align: center;
+}
+
+.start-screen-btn:hover {
+    background-color: #FDDCC4;
+    transition: 0.5s;
+}
+
+.start-screen-btn:active {
+    transform: scale(90%);
 }
 
 .start-screen-puppy-picture {
@@ -155,7 +172,7 @@ header .wrapper {
 
 
 .wrapper-header-start-screen {
-    background: url(../../../assets/images/background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+    background: url(../../../assets/images/background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .about-section .wrapper {
@@ -179,9 +196,7 @@ header .wrapper {
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
-    /* or 45px */
     letter-spacing: 0.06em;
-    /* color-dark-l */
     color: #545454;
     max-width: 370px;
 }
@@ -192,8 +207,6 @@ header .wrapper {
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
-    /* or 24px */
-    /* color-dark-xl */
     color: #4C4C4C;
     max-width: 430px;
 }
@@ -220,10 +233,8 @@ header .wrapper {
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
-    /* or 45px */
     text-align: center;
     letter-spacing: 0.06em;
-    /* color-dark-l */
     color: #545454;
     max-width: 400px;
 }
@@ -238,12 +249,23 @@ header .wrapper {
 .pets-slider-btn {
     width: 52px;
     height: 52px;
-
     background-repeat: no-repeat;
     background-position: center;
     border: 2px solid #F1CDB3;
     border-radius: 100%;
 }
+
+.pets-slider-btn:hover {
+    background-color: #FDDCC4;
+    transition: 0.5s;
+    border-color: #FDDCC4;
+    cursor: pointer;
+}
+
+.pets-slider-btn:active {
+    transform: scale(90%);
+}
+
 .psb-left {
     background-image: url(../../../assets/icons/arrow_left.svg);
 }
@@ -268,6 +290,26 @@ header .wrapper {
     border-radius: 9px;
 }
 
+.pets-card:hover {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: #FFFFFF;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.pets-card:hover button {
+    background-color: #FDDCC4;
+    border-color: #FDDCC4;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.pets-card:active {
+    transform: scale(90%);
+}
+
+
+
 .pets-card-name {
     font-family: 'Georgia';
     font-style: normal;
@@ -286,16 +328,20 @@ header .wrapper {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
-
     border: 2px solid #F1CDB3;
     border-radius: 100px;
-
     padding: 15px 0;
     text-align: center;
     width: 187px;
     height: 52px;
     margin-bottom: 30px;
     display: block;
+}
+
+.pets-card-btn:hover {
+    background-color: #FDDCC4;
+    transition: 0.5s;
+    border-color: #FDDCC4;
 }
 
 .pets-content-bottom-btn {
@@ -306,13 +352,21 @@ header .wrapper {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
-
     background: #F1CDB3;
     border-radius: 100px;
     padding: 15px 0;
     text-align: center;
     width: 261px;
     height: 52px;
+}
+
+.pets-content-bottom-btn:hover {
+    background-color: #FDDCC4;
+    transition: 0.5s;
+}
+
+.pets-content-bottom-btn:active {
+    transform: scale(90%);
 }
 
 /* HOW TO HELP */
@@ -425,7 +479,6 @@ header .wrapper {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #545454;
-
     background: #F1CDB3;
     border-radius: 9px;
     display: flex;
@@ -434,7 +487,18 @@ header .wrapper {
     padding: 10px 15px;
     height: 43px;
 }
-    
+
+.credit-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(167, 199, 218);
+    transition: 0.5s;
+    color:grey;
+}
+
+.credit-card:active {
+    transform: scale(90%);
+}
+
 .donation-legal-info {
     font-family: 'Arial';
     font-style: italic;
@@ -495,11 +559,20 @@ footer .wrapper {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #F1CDB3;
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+}
+
+.fcb-logo-link:hover
+{
+    filter: brightness(900%);
+    transition: 10s;
+}
+
+.fcb-logo-link:active {
+    transform: scale(90%);
 }
 
 .footer-puppy {
