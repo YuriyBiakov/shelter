@@ -223,6 +223,16 @@ main {
     background-position: center;
     width: 52px;
     height: 52px;
+    border: 2px solid;
+    border-radius: 100px;
+}
+
+.ofpp-btn.inactive {
+    border-color:  #CDCDCD;
+}
+
+.ofpp-btn.active {
+    border-color:  #F1CDB3;
 }
 
 .left-end-btn {
@@ -265,6 +275,7 @@ main {
 
     background: #F1CDB3;
     border-radius: 100px;
+    border-color: #F1CDB3;
 }
 
 
