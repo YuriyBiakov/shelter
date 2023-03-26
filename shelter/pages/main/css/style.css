@@ -568,7 +568,7 @@ footer .wrapper {
 .fcb-logo-link:hover
 {
     filter: brightness(900%);
-    transition: 10s;
+    transition: filter 10s;
 }
 
 .fcb-logo-link:active {
