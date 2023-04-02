@@ -73,6 +73,23 @@ header .wrapper {
     color: #292929;
 }
 
+
+.burger-icon {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .burger-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    .header-ul {
+        display: none;
+    }
+}
+
 .header-li-link {
     font-family: 'Arial';
     font-style: normal;
