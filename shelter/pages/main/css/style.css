@@ -19,8 +19,6 @@ a {
     text-decoration: none;
     color: inherit;
     display: block;
-    /* font-size: inherit; */
-    /* line-height: inherit; */
 }
 
 button {
@@ -36,12 +34,24 @@ button {
     margin: 0 auto;
 }
 
+@media(max-width: 1270px) {
+    .wrapper {
+        padding: 0  30px;
+    }
+}
+
 header .wrapper {
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 1280px) {
+    header .wrapper {
+        padding-bottom: 0;
+    }
 }
 
 .logo:hover {
@@ -113,8 +123,6 @@ header .wrapper {
     transform: scale(90%);
 }
 
-
-
 .start-screen .wrapper{
     display: flex;
     justify-content: space-between;
@@ -136,9 +144,7 @@ header .wrapper {
     font-weight: 400;
     font-size: 44px;
     line-height: 130%;
-    /* or 57px */
     color: #FFFFFF;
-
     max-width: 310px;
 }
 
@@ -148,10 +154,7 @@ header .wrapper {
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
-    /* or 24px */
-    /* color-dark-s */
     color: #CDCDCD;
-
     max-width: 460px;
 }
 
@@ -180,10 +183,30 @@ header .wrapper {
     transform: scale(90%);
 }
 
-.start-screen-puppy-picture {
+.start-screen-puppy-img {
     display: block;
 }
 
+@media (max-width: 1200px){
+    .start-screen .wrapper{
+        flex-direction: column;
+        align-items: center;
+        gap: 99.5px;
+        padding-top: 60px;
+    }
+
+    .start-screen-puppy-picture{
+        align-self: flex-end;
+    }
+
+    .start-screen-text-content {
+        padding-bottom: 0;
+    }
+
+    .start-screen-btn {
+        align-self: center;
+    }
+}
 
 .wrapper-header-start-screen {
     background: url(../../../assets/images/background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
@@ -224,6 +247,19 @@ header .wrapper {
     color: #4C4C4C;
     max-width: 430px;
 }
+
+@media (max-width: 1200px){
+    .about-section .wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .about-text-block{
+        padding-top: 0;
+    }
+
+    }
 
 /* OUR PETS SECTION */
 
@@ -322,8 +358,6 @@ header .wrapper {
     transform: scale(90%);
 }
 
-
-
 .pets-card-name {
     font-family: 'Georgia';
     font-style: normal;
@@ -383,6 +417,23 @@ header .wrapper {
     transform: scale(90%);
 }
 
+@media (max-width: 1200px) {
+    .pets-card:last-child {
+        display: none;
+    }
+
+    .pets-slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .pets-section-slider-cards {
+        gap: 40px;
+    }
+}
+
 /* HOW TO HELP */
 
 .help-section .wrapper {
@@ -438,6 +489,16 @@ header .wrapper {
     color: #545454;
 }
 
+@media (max-width:1200px) {
+    .help-cards { 
+        gap: 60px;
+        row-gap: 54px;
+    }
+    .help-card {
+        width: 170px;
+    }
+}
+
     /* DONATION SECTION  */
 
 .donation-section {
@@ -447,10 +508,10 @@ header .wrapper {
 .donation-section .wrapper {
     padding-top: 80px;
     padding-bottom: 100px;
-    padding-left: 183px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 30px;
+    align-items: center;
 }
 
 .donation-dog {
@@ -523,6 +584,19 @@ header .wrapper {
     width: 380px;
 }
 
+@media (max-width:1200px){
+    .donation-section .wrapper {
+        flex-direction: column-reverse;
+        align-items: start;
+        padding-top: 84px;
+        padding-left: 131px;
+        gap: 46px;
+    }
+    .donation-card-block {
+        padding-left: 63px;
+    }
+}
+
 /* FOOTER */
 footer { 
     background: url(../../../assets/images/background.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
@@ -593,3 +667,31 @@ footer .wrapper {
     display: block;
 }
 
+@media (max-width:1200px){
+    footer .wrapper {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+
+    .footer-contacts {
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        padding: 0 34px;
+    }
+
+    .footer-content-block.questions {
+        row-gap: 38px;
+        max-width: 279px;
+    }
+    
+    .footer-content-block.visit {
+        row-gap: 33px;
+        max-width: 302px;
+    }
+
+}
