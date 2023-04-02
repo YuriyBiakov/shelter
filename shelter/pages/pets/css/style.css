@@ -34,8 +34,13 @@ button {
     margin: 0 auto;
 }
 
+@media(max-width: 1270px) {
+    .wrapper {
+        padding: 0  30px;
+    }
+}
+
 header .wrapper {
-    /* !!! */
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
@@ -147,7 +152,6 @@ main {
     gap: 40px;
     row-gap: 30px;
     flex-wrap: wrap;
-
 }
 
 .pets-card {
@@ -295,7 +299,34 @@ main {
     border-color: #F1CDB3;
 }
 
+@media (max-width:1200px) {
+    .wrapper.our-friends {
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column; */
+        padding-top: 80px;
+        padding-bottom: 72px;
+        gap: 28px;
+    }
 
+    .of-pagination-cards {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        row-gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .pets-card:nth-child(n+7) {
+        display: none;
+    }
+    
+    .of-navigation-panel {
+        padding-top: 16px;
+    }
+
+}
 /* FOOTER */
 footer { 
     background: url(../../../assets/images/background.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
@@ -366,3 +397,30 @@ footer .wrapper {
     display: block;
 }
 
+@media (max-width:1200px){
+    footer .wrapper {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+
+    .footer-contacts {
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        padding: 0 34px;
+    }
+
+    .footer-content-block.questions {
+        row-gap: 38px;
+        max-width: 279px;
+    }
+    
+    .footer-content-block.visit {
+        row-gap: 33px;
+        max-width: 302px;
+    }
+}
