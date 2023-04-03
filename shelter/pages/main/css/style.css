@@ -482,6 +482,18 @@ header .wrapper {
     transform: scale(90%);
 }
 
+@media (max-width: 1270px) {
+    .pets-slider {
+        gap: 43px;
+    }
+}
+
+@media (max-width: 1235px) {
+    .pets-slider {
+        gap: 33px;
+    }
+}
+
 @media (max-width: 1200px) {
     .pets-card:last-child {
         display: none;
