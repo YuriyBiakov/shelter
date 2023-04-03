@@ -783,7 +783,7 @@ header .wrapper {
     .donation-section .wrapper {
         flex-direction: column-reverse;
         align-items: center;
-        padding: 42px 20px 33px 20px;
+        padding: 42px 20px 35px 20px;
         gap: 35px;
     }
 
@@ -917,9 +917,10 @@ footer .wrapper {
     }
 }
 
-@media (max-width: 625px){
+@media (max-width: 765px){
     footer .wrapper {
-        gap: 40px;
+        gap: 41px;
+        flex-direction: column;
     }
 
     .footer-content-block h3{
@@ -939,12 +940,11 @@ footer .wrapper {
     }
     
     .footer-content-block.visit {
-        row-gap: 35px;
+        row-gap: 38px;
     }
 
     .footer-content-block.visit h3 {
         max-width: 270px;
         margin-left: 15px;
-        /* letter-spacing: normal; */
     }
 }
