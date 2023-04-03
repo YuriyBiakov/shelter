@@ -17,6 +17,7 @@
                     <h1 class="logo-heading">Cozy House</h1>
                     <p class="logo-subtitle">Shelter for pets in Boston</p>
                 </a>
+                <img class="burger-icon" src="../../assets/icons/burger_main.svg" alt="burger menu">
                 <ul class="header-ul">
                     <li class="header-li"><a class="header-li-link active">About the shelter</a></li>
                     <li class="header-li"><a class="header-li-link inactive" target="_blank" href="../pets/index.html">Our pets</a></li>
@@ -32,8 +33,10 @@
                     <p class="start-screen-subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                     <a class="start-screen-btn" href="#our-friends">Make a friend</a>
                 </div>
-                <picture>
-                    <img class="start-screen-puppy-picture" src="../../assets/images/ss-puppy-desktop.png" alt="puppy picture">
+                <picture class="start-screen-puppy-picture">
+                    <source srcset="../../assets/images/ss-puppy-320.png" media="(max-width: 625px)">
+                    <source srcset="../../assets/images/ss-puppy-768.png" media="(max-width: 1200px)">
+                    <img class="start-screen-puppy-img" src="../../assets/images/ss-puppy-desktop.png" alt="puppy picture">
                 </picture>
             </div>
         </section>
@@ -42,6 +45,7 @@
         <section class="about-section">
             <div class="wrapper">
                 <picture>
+                     <source srcset="../../assets/images/about-pets-mobile.png" media="(max-width: 625px)">
                     <img src="../../assets/images/about-pets.png" alt="pets - cat and dog picture">
                 </picture>
                 <div class="about-text-block">
@@ -64,7 +68,7 @@
                     Our friends who<br>are looking for a house
                 </h3>
                 <div class="pets-slider">
-                    <button class="pets-slider-btn psb-left"></button>
+                    <button class="pets-slider-btn psb-left pss-desktop-btn"></button>
                     <div class="pets-section-slider-cards">
                             <div class="pets-card">
                             <img src="../../assets/images/pets-katrine.png" alt="cat Katrine">
@@ -82,7 +86,11 @@
                             <button class="pets-card-btn">Learn more</button>
                         </div>
                     </div>
-                    <button class="pets-slider-btn psb-right"></button>
+                    <button class="pets-slider-btn psb-right pss-desktop-btn"></button>
+                    <div class="pss-control-panel">
+                        <button class="pets-slider-btn psb-left"></button>
+                        <button class="pets-slider-btn psb-right"></button>
+                    </div>
                 </div>
                 <a class="pets-content-bottom-btn" href="../pets/index.html">Get to know the rest</a>
             </div>
@@ -91,76 +99,78 @@
         <section class="help-section" id="help">
             <div class="wrapper">
                 <h3 class="help-heading">How you can help<br>our shelter</h3>
-                    <div class="help-cards">
-                        <figure class="help-card">
-                            <img src="../../assets/icons/pet-food.svg" alt="pet food icon">
-                            <figcaption class="help-card-caption">
-                                <p>Pet food</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 2 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/transportation.svg" alt="transportation icon">
-                            <figcaption class="help-card-caption">
-                                <p>Transportation</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 3 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/toys.svg" alt="toys icon">
-                            <figcaption class="help-card-caption">
-                                <p>Toys</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 4 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/bowls.svg" alt="bowls and cups icon">
-                            <figcaption class="help-card-caption">
-                                <p>Bowls and cups</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 5 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/shampoos.svg" alt="shampoos icon">
-                            <figcaption class="help-card-caption">
-                                <p>Shampoos</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 6 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/vitamins.svg" alt="vitamins icon">
-                            <figcaption class="help-card-caption">
-                                <p>Vitamins</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 7 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/medicines.svg" alt="medicines icon">
-                            <figcaption class="help-card-caption">
-                                <p>Medicines</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 8 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/collars.svg" alt="collars and leashes icon">
-                            <figcaption class="help-card-caption">
-                                <p>Collars / leashes</p>
-                            </figcaption>
-                        </figure>
-                        <!-- CARD 9 -->
-                        <figure class="help-card">
-                            <img src="../../assets/icons/sleeping-areas.svg" alt="sleeping areas icon">
-                            <figcaption class="help-card-caption">
-                                <p>Sleeping areas</p>
-                            </figcaption>
-                        </figure>
-                    </div>
+                <div class="help-cards">
+                    <!-- CARD 1 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/pet-food.svg" alt="pet food icon">
+                        <figcaption class="help-card-caption">
+                            <p>Pet food</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 2 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/transportation.svg" alt="transportation icon">
+                        <figcaption class="help-card-caption">
+                            <p>Transportation</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 3 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/toys.svg" alt="toys icon">
+                        <figcaption class="help-card-caption">
+                            <p>Toys</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 4 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/bowls.svg" alt="bowls and cups icon">
+                        <figcaption class="help-card-caption">
+                            <p>Bowls and cups</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 5 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/shampoos.svg" alt="shampoos icon">
+                        <figcaption class="help-card-caption">
+                            <p>Shampoos</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 6 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/vitamins.svg" alt="vitamins icon">
+                        <figcaption class="help-card-caption">
+                            <p>Vitamins</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 7 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/medicines.svg" alt="medicines icon">
+                        <figcaption class="help-card-caption">
+                            <p>Medicines</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 8 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/collars.svg" alt="collars and leashes icon">
+                        <figcaption class="help-card-caption">
+                            <p>Collars / leashes</p>
+                        </figcaption>
+                    </figure>
+                    <!-- CARD 9 -->
+                    <figure class="help-card">
+                        <img class="card-img" src="../../assets/icons/sleeping-areas.svg" alt="sleeping areas icon">
+                        <figcaption class="help-card-caption">
+                            <p>Sleeping areas</p>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
         <!-- DONATION SECTION -->
         <section class="donation-section">
             <div class="wrapper">
                 <picture class="donation-dog">
+                    <source srcset="../../assets/images/donation-dog-mobile.png" media="(max-width: 625px)">
                     <img src="../../assets/images/donation-dog.png" alt="dog picture">
                 </picture>
                 <div class="donation-card-block">
@@ -205,6 +215,7 @@
                 </div>
             </div>
             <picture>
+                <source srcset="../../assets/images/footer-puppy-320.png" media="(max-width: 400px)">
                 <img class="footer-puppy" src="../../assets/images/footer-puppy.png" alt="puppy picture">
             </picture>
         </div>
