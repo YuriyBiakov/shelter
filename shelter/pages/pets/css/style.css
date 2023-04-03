@@ -301,10 +301,6 @@ main {
 
 @media (max-width:1200px) {
     .wrapper.our-friends {
-        /* display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column; */
         padding-top: 80px;
         padding-bottom: 72px;
         gap: 28px;
