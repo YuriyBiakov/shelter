@@ -124,7 +124,6 @@ header .wrapper {
     width: 30px;
 	height: 20px;
     transition: 0.5s;
-
     position: absolute;
     top: 50px;
     right:20px;
@@ -214,6 +213,13 @@ header .wrapper {
     }
 }
 /* MEDIA 767 over */
+
+@media (min-width: 768px) {
+    .overlay {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
 
 .start-screen .wrapper{
     display: flex;

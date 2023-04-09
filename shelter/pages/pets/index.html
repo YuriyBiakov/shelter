@@ -10,19 +10,26 @@
     <link rel="shortcut icon"  href="../../assets/icons/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="wrapper">
             <a class="logo" href="../main/index.html">
                 <h1 class="logo-heading">Cozy House</h1>
                 <p class="logo-subtitle">Shelter for pets in Boston</p>
             </a>
-            <img class="burger-icon" src="../../assets/icons/our_pets/burger_pets.svg" alt="burger menu">
-            <ul class="header-ul">
-                <li class="header-li"><a class="header-li-link inactive" target="_blank" href="../main/index.html">About the shelter</a></li>
-                <li class="header-li"><a class="header-li-link active">Our pets</a></li>
-                <li class="header-li"><a class="header-li-link inactive" href="../main/index.html#help">Help the shelter</a></li>
-                <li class="header-li"><a class="header-li-link inactive" href="#footer">Contacts</a></li>
-            </ul>
+            <nav>
+                    <ul class="header-ul">
+                    <li class="header-li"><a class="header-li-link inactive" target="_blank" href="../main/index.html">About the shelter</a></li>
+                    <li class="header-li"><a class="header-li-link active">Our pets</a></li>
+                    <li class="header-li"><a class="header-li-link inactive" href="../main/index.html#help">Help the shelter</a></li>
+                    <li class="header-li"><a class="header-li-link inactive" href="#footer">Contacts</a></li>
+                    </ul>
+            </nav>
+            <div class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <main>
@@ -119,5 +126,6 @@
             </picture>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
