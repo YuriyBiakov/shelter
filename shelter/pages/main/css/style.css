@@ -8,6 +8,11 @@ html {
     scroll-behavior: smooth;
 }
 
+.hidden {
+    right: -100%;
+    position: fixed;
+}
+
 .scroll-lock {
     overflow-y: hidden;
 }

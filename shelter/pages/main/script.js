@@ -52,11 +52,17 @@ function getCard(cardIndex) {
     const cardButton = createNode('button', 'pets-card-btn');
     cardImg.setAttribute('src', cards[cardIndex].img);
     cardImg.setAttribute('alt', `${cards[cardIndex].name} photo`);
-    cardImg.setAttribute('h4', `${cards[cardIndex].name} photo`);
     cardTitle.innerHTML = cards[cardIndex].name;
     cardButton.innerHTML = 'Learn more';
     cardBlock.append(cardImg, cardTitle, cardButton);
     return cardBlock;
+}
+
+function moveChildren(node) {
+    let children = node.children;
+    for (let i = 0; i < children.length; ++i) {
+        children[i].setAttribute('class', 'hidden');
+    }
 }
 
 function removeChildren(node) {
@@ -65,47 +71,80 @@ function removeChildren(node) {
     }
 }
 
-let isActive = 0;
+//создаем массив индексов - ключей к массиву объектов
 
-function isActiveUp() {
-    isActive += 3;
-    if (isActive > 6) isActive = 0;
+let indexArray = [0,1,2,3,4,5,6,7];
+let currentCards = [];
+let prevCards = [];
+let renderIndexes = [];
+let prevStep = '';
+
+// функция - перемешать массив
+function sortArrayIndexes(){
+indexArray.sort(() => Math.random() - 0.5);
 }
 
-function isActiveDown() {
-    isActive -= 3;
-    if (isActive < 0) isActive = 6;
-}
-
-
-function renderCards(numbers, isActive) {
-    const petsSliderCards = document.querySelector('.pets-section-slider-cards');
-    for (let i = isActive, step = 1; step <= 3; step++, i++){
-    petsSliderCards.append(getCard(numbers[i]));
-    if (i === 7) i = -1;
-    console.log(isActive);
+// функция получить массив для рендера
+function getRenderIndexes() {
+    renderIndexes = [];
+    let i = 0;
+    while (renderIndexes.length < 3) {
+        if (currentCards.findIndex((val) => val === indexArray[i]) !== -1){
+            i ++;
+        }
+        else 
+        {renderIndexes.push(indexArray[i]);
+        i++;
+        }
     }
 }
 
-const indexArray = [0,1,2,3,4,5,6,7].sort(() => Math.random() - 0.5);
-
-renderCards(indexArray, isActive);
+function renderCards() {
+    const petsSliderCards = document.querySelector('.pets-section-slider-cards');
+    let length = renderIndexes.length;
+    for (let i = 0; i < length;  i++){
+    petsSliderCards.append(getCard(renderIndexes[i]));
+    }
+    currentCards = renderIndexes;
+}
+sortArrayIndexes();
+getRenderIndexes();
+renderCards();
 
 const rightButton = document.querySelector('.psb-right');
 const leftButton = document.querySelector('.psb-left');
 
 rightButton.addEventListener('click', () => {
-    isActiveUp();
     const petsSliderCards = document.querySelector('.pets-section-slider-cards');
     removeChildren(petsSliderCards);
-    renderCards(indexArray, isActive);
+
+    if (prevStep === 'left') {
+        renderIndexes = prevCards;
+    }
+    else {
+        sortArrayIndexes();
+        getRenderIndexes();
+    }
+    prevCards = currentCards;
+    renderCards();
+    prevStep = 'right';
 });
 
 leftButton.addEventListener('click', () => {
-    isActiveDown();
     const petsSliderCards = document.querySelector('.pets-section-slider-cards');
     removeChildren(petsSliderCards);
-    renderCards(indexArray, isActive);
+
+    if (prevStep === 'right') {
+        renderIndexes = prevCards;
+    }
+    else {
+        sortArrayIndexes();
+        getRenderIndexes();
+    }
+
+    prevCards = currentCards;
+    renderCards();
+    prevStep = 'left';
 });
 
 // Console
