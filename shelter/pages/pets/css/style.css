@@ -361,6 +361,14 @@ main {
     background-image: url(../../../assets/icons/our_pets/pag_left.svg);
 }
 
+.left-end-btn.inactive {
+    background-image: url(../../../assets/icons/our_pets/pag_ia_top_left.svg);
+}
+
+.left-btn.inactive{
+    background-image: url(../../../assets/icons/our_pets/pag_ia_left.svg);
+}
+
 .right-end-btn {
     background-image: url(../../../assets/icons/our_pets/pag_top_right.svg);
 
@@ -368,6 +376,15 @@ main {
 
 .right-btn {
     background-image: url(../../../assets/icons/our_pets/pag_right.svg);
+}
+
+.right-end-btn.inactive {
+    background-image: url(../../../assets/icons/our_pets/pag_ia_top_right.svg);
+
+}
+
+.right-btn.inactive {
+    background-image: url(../../../assets/icons/our_pets/pag_ia_right.svg);
 }
 
 .ofpp-btn.active:hover {

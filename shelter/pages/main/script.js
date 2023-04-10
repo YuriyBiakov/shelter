@@ -58,13 +58,6 @@ function getCard(cardIndex) {
     return cardBlock;
 }
 
-function moveChildren(node) {
-    let children = node.children;
-    for (let i = 0; i < children.length; ++i) {
-        children[i].setAttribute('class', 'hidden');
-    }
-}
-
 function removeChildren(node) {
     while (node.lastElementChild) {
         node.removeChild(node.lastElementChild);
